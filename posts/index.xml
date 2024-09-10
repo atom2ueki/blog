@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on NSFantasticEngineering(👻)</title>
+    <link>https://blog.atom2ueki.com/posts/</link>
+    <description>Recent content in Posts on NSFantasticEngineering(👻)</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Sep 2024 16:54:30 +0000</lastBuildDate>
+    <atom:link href="https://blog.atom2ueki.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Ffmpeg on Macos</title>
+      <link>https://blog.atom2ueki.com/posts/install-ffmpeg-on-macos/</link>
+      <pubDate>Sun, 01 Mar 2020 23:12:07 +0800</pubDate>
+      <guid>https://blog.atom2ueki.com/posts/install-ffmpeg-on-macos/</guid>
+      <description>FFmpeg is a free and open-source project consisting of a vast software suite of libraries and programs for handling video, audio, and other multimedia files and streams.</description>
+    </item>
+  </channel>
+</rss>
