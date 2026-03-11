@@ -1,6 +1,6 @@
 baseURL = "https://blog.atom2ueki.com/"
 languageCode = "en-us"
-title = "NSFantasticEngineering(👻)"
+title = "NSFantasticEngineering"
 theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true

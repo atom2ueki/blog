@@ -1,5 +1,5 @@
 +++
-title = 'Install FFmpeg on macOS with Homebrew (Updated Guide)'
+title = 'Install FFmpeg on macOS with Homebrew: Updated Guide'
 date = 2020-03-01T23:12:07+08:00
 draft = false
 pin = true

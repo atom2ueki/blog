@@ -1,8 +1,8 @@
 +++
-title = 'Codex MCP Tips: Sentry and Supabase (Claude-like Setup)'
+title = 'Codex MCP Tips: Sentry and Supabase Setup'
 date = 2026-03-11T18:05:00+08:00
 draft = false
-pin = false
+pin = true
 author = 'Tony Li'
 keywords = ['codex', 'mcp', 'sentry', 'supabase', 'oauth']
 cover = '/images/posts/codex-mcp-sentry-supabase-tips/cover.png'
