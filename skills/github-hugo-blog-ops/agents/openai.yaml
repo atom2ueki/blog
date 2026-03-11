@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Hugo Blog Ops"
+  short_description: "Operate draft, publish, and maintenance workflows."
+  default_prompt: "Manage this Hugo blog end-to-end: create drafts, update front matter, publish via GitHub push, and run maintenance checks safely."
