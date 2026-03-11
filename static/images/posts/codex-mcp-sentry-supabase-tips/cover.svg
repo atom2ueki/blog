@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Codex MCP Tips Cover</title>
+  <desc id="desc">Codex MCP Tips: Sentry and Supabase setup with OAuth</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0b3b5a"/>
+    </linearGradient>
+    <linearGradient id="stripe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="64" y="78" width="104" height="8" rx="4" fill="url(#stripe)"/>
+
+  <text x="64" y="170" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="56" font-weight="700">
+    Codex MCP Tips
+  </text>
+  <text x="64" y="240" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="38" font-weight="600">
+    Sentry + Supabase
+  </text>
+  <text x="64" y="296" fill="#94a3b8" font-family="Arial, sans-serif" font-size="30" font-weight="500">
+    OAuth setup and Claude-like workflow
+  </text>
+
+  <rect x="64" y="356" width="1072" height="2" fill="#334155"/>
+  <text x="64" y="414" fill="#67e8f9" font-family="Arial, sans-serif" font-size="28" font-weight="600">
+    blog.atom2ueki.com
+  </text>
+
+  <g opacity="0.16">
+    <circle cx="1070" cy="128" r="88" fill="#22d3ee"/>
+    <circle cx="1010" cy="520" r="120" fill="#60a5fa"/>
+  </g>
+</svg>

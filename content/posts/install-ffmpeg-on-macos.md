@@ -1,9 +1,14 @@
 +++
-title = 'Install Ffmpeg on Macos'
+title = 'Install FFmpeg on macOS with Homebrew (Updated Guide)'
 date = 2020-03-01T23:12:07+08:00
 draft = false
 pin = true
+author = 'Tony Li'
+keywords = ['ffmpeg', 'macos', 'homebrew', 'video', 'h265']
+cover = '/images/posts/install-ffmpeg-on-macos/cover.png'
+canonicalURL = 'https://blog.atom2ueki.com/posts/install-ffmpeg-on-macos/'
 summary = 'FFmpeg is a free and open-source project consisting of a vast software suite of libraries and programs for handling video, audio, and other multimedia files and streams.'
+lastmod = 2026-03-11T21:50:00+08:00
 +++
 
 ![image](https://images.unsplash.com/photo-1565221287653-9a2713dbe4ef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
