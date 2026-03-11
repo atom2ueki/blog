@@ -11,6 +11,8 @@ summary = 'How to set up Sentry MCP and Supabase MCP in Codex with OAuth, and ho
 lastmod = 2026-03-11T21:32:00+08:00
 +++
 
+![Codex MCP Tips cover image with Sentry and Supabase setup](/images/posts/codex-mcp-sentry-supabase-tips/cover.png)
+
 If you are coming from Claude Code plugins, Codex can feel "lower level" at first.
 
 The good news: you can get a very similar experience by wiring the same remote MCP servers directly in Codex.
