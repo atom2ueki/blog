@@ -21,11 +21,8 @@
 <script defer src="{{ "js/site.js" | absURL }}"></script>
 
 <!-- favicon -->
-{{ if os.FileExists "static/favicon.ico" }}<link rel="icon" href="{{ "favicon.ico" | absURL }}">{{ end }}
-{{ if os.FileExists "static/favicon-32x32.png" }}<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | absURL }}">{{ end }}
-{{ if os.FileExists "static/favicon-16x16.png" }}<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | absURL }}">{{ end }}
-{{ if os.FileExists "static/apple-touch-icon.png" }}<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">{{ end }}
-{{ if os.FileExists "static/site.webmanifest" }}<link rel="manifest" href="{{ "site.webmanifest" | absURL }}">{{ end }}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32.png" | absURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon.png" | absURL }}">
 
 <!-- RSS header-->
 {{ with .OutputFormats.Get "rss" -}}
@@ -43,4 +40,4 @@
   {{ end }}
 {{ end }}
 {{ with .Site.LanguageCode}}<meta property="og:locale" content="{{ . }}" />{{ end }}
-{{ with .Site.Params.about }}<meta property="og:image" content="{{ with .logo_image }}{{ . | absURL }}{{ end }}" />{{ end }}
+<meta property="og:image" content="{{ "images/og-image.png" | absURL }}" />

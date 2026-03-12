@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Dark background matching theme -->
+  <rect width="1200" height="630" fill="#181818"/>
+
+  <!-- Logo: line-drawn square with cross, centered and offset up -->
+  <g transform="translate(470, 60)">
+    <rect x="4" y="4" width="252" height="252" rx="4" fill="none" stroke="#a1b56c" stroke-width="8"/>
+    <line x1="130" y1="4" x2="130" y2="256" stroke="#a1b56c" stroke-width="8"/>
+    <line x1="4" y1="130" x2="256" y2="130" stroke="#a1b56c" stroke-width="8"/>
+
+    <text x="67" y="67" fill="#a1b56c"
+          font-family="SFMono-Regular, Menlo, Consolas, monospace" font-weight="700" font-size="64"
+          text-anchor="middle" dominant-baseline="central">N</text>
+    <text x="193" y="67" fill="#a1b56c"
+          font-family="SFMono-Regular, Menlo, Consolas, monospace" font-weight="700" font-size="64"
+          text-anchor="middle" dominant-baseline="central">S</text>
+    <text x="67" y="193" fill="#a1b56c"
+          font-family="SFMono-Regular, Menlo, Consolas, monospace" font-weight="700" font-size="64"
+          text-anchor="middle" dominant-baseline="central">F</text>
+    <text x="193" y="193" fill="#a1b56c"
+          font-family="SFMono-Regular, Menlo, Consolas, monospace" font-weight="700" font-size="64"
+          text-anchor="middle" dominant-baseline="central">E</text>
+  </g>
+
+  <!-- Blog title -->
+  <text x="600" y="400" fill="#d8d8d8"
+        font-family="SFMono-Regular, Menlo, Consolas, monospace" font-weight="700" font-size="36"
+        text-anchor="middle">NSFantasticEngineering</text>
+
+  <!-- Tagline -->
+  <text x="600" y="450" fill="#585858"
+        font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18"
+        text-anchor="middle">Notes on agents, tooling, and software systems.</text>
+</svg>
