@@ -1,41 +1,55 @@
 baseURL = "https://blog.atom2ueki.com/"
 languageCode = "en-us"
 title = "NSFantasticEngineering"
-theme = "github-style"
-pygmentsCodeFences = true
-pygmentsUseClasses = true
+author = "Tony Li"
+theme = "risotto"
+copyright = "© Tony Li"
+
+sectionPagesMenu = "main"
+
+[pagination]
+pagerSize = 10
 
 [params]
-  author = "Tony Li"
-  description = "Find new interesting things"
-  github = "atom2ueki"
-  instagram = "atom2ueki"
-  email = "atom2ueki@gmail.com"
-  url = "https://blog.atom2ueki.com"
-  keywords = "blog, google analytics"
-  rss = false
-  lastmod = true
-  favicon = "/images/github-mark.png"
-  avatar = "/images/avatar.png"
-  headerIcon = "/images/github-mark-white.png"
-  location = "Singapore"
-  userStatusEmoji = "😀"
-  enableGitalk = true
-  enableSearch = true
+noindex = false
+author = "Tony Li"
 
-  [params.gitalk]
-    clientID = "Your client ID" # Your client ID
-    clientSecret = "Your client secret" # Your client secret
-    repo = "blog" # 您的博客的github地址Repository name，例如：xxxx.github.io
-    owner = "atom2ueki" # 您的GitHub ID
-    admin = "atom2ueki" # 您的GitHub ID
-    id = "location.pathname" # 文章页面的链接地址就是ID
-    labels = "gitalk" # Github issue labels. If you used to use Gitment, you can change it
-    perPage = 15 # Pagination size, with maximum 100.
-    pagerDirection = "last" # Comment sorting direction, available values are 'last' and 'first'.
-    createIssueManually = true # 设置为true，如果是管理员登录，会自动创建issue，如果是false，需要管理员手动添加第一个评论(issue)
-    distractionFreeMode = false # Enable hot key (cmd|ctrl + enter) submit comment.
-    proxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token" # 可以自行添加反向代理
+[params.theme]
+palette = "base16-dark"
 
-[frontmatter]
-  lastmod = ["lastmod", ":fileModTime", ":default"]
+[params.about]
+title = "NSFantasticEngineering"
+description = "Notes on agents, tooling, and software systems."
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "GitHub"
+url = "https://github.com/atom2ueki"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-instagram"
+title = "Instagram"
+url = "https://instagram.com/atom2ueki"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-envelope"
+title = "Email"
+url = "mailto:atom2ueki@gmail.com"
+
+[menu]
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+ordered = true
+
+[markup.highlight]
+codeFences = false

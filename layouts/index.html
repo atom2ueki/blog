@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <div class="copy-page-actions">
+        <button class="copy-page-button" type="button" data-copy-source="page-markdown">
+            <i class="fa-regular fa-copy"></i> Copy page
+        </button>
+        <button class="copy-page-button secondary" type="button" data-view-source="page-markdown">
+            <i class="fa-regular fa-file-lines"></i> View as Markdown
+        </button>
+        <span class="copy-page-status" data-copy-status aria-live="polite"></span>
+    </div>
+    {{ .Content }}
+    <template id="page-markdown"># {{ .Title }}
+
+{{ .RawContent }}
+    </template>
+{{ end }}

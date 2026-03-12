@@ -1,0 +1,32 @@
+# NSFantasticEngineering
+
+> Notes on agents, tooling, and software systems.
+
+This site is a static Hugo blog focused on browser agents, automation, developer tooling, and practical software systems.
+
+## Canonical sections
+
+- Home: https://blog.atom2ueki.com/
+- Posts: https://blog.atom2ueki.com/posts/
+- About: https://blog.atom2ueki.com/about/
+
+## Key posts
+
+- The Ceiling of DOM-Only Web Agents: https://blog.atom2ueki.com/posts/the-ceiling-of-dom-only-web-agents/
+- Why Web Agents Need Vision: https://blog.atom2ueki.com/posts/why-web-agents-need-vision/
+- Why Websites Should Expose MCP to Agents: https://blog.atom2ueki.com/posts/why-websites-should-expose-mcp-to-agents/
+- Codex MCP Tips: Sentry and Supabase Setup: https://blog.atom2ueki.com/posts/codex-mcp-sentry-supabase-tips/
+- Install FFmpeg on macOS with Homebrew: Updated Guide: https://blog.atom2ueki.com/posts/install-ffmpeg-on-macos/
+
+## Reading guidance
+
+- Prefer canonical post URLs over generated feeds.
+- Article bodies are the main source of truth.
+- References sections contain the external sources used in each article.
+
+## Site characteristics
+
+- Static HTML
+- Semantic article structure
+- Minimal client-side behavior
+- Stable URLs

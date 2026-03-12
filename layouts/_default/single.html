@@ -1,0 +1,48 @@
+{{ define "main" }}
+    <header class="content__header">
+        <h1>{{ .Title }}</h1>
+    </header>
+    <div class="copy-page-actions">
+        <button class="copy-page-button" type="button" data-copy-source="page-markdown">
+            <i class="fa-regular fa-copy"></i> Copy page
+        </button>
+        <button class="copy-page-button secondary" type="button" data-view-source="page-markdown">
+            <i class="fa-regular fa-file-lines"></i> View as Markdown
+        </button>
+        <span class="copy-page-actions__sep"></span>
+        <a class="copy-page-button secondary" href="https://x.com/intent/tweet?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener" aria-label="Share on X">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a class="copy-page-button secondary" href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a class="copy-page-button secondary" href="https://news.ycombinator.com/submitlink?u={{ .Permalink | urlquery }}&t={{ .Title | urlquery }}" target="_blank" rel="noopener" aria-label="Share on Hacker News">
+            <i class="fa-brands fa-hacker-news"></i>
+        </a>
+        <button class="copy-page-button secondary" type="button" data-copy-url="{{ .Permalink }}" aria-label="Copy link">
+            <i class="fa-solid fa-link"></i>
+        </button>
+    </div>
+    <div class="content__body">
+        {{ .Content }}
+    </div>
+    <template id="page-markdown"># {{ .Title }}
+{{ with .Params.summary }}
+> {{ . }}
+{{ end }}
+{{ with .Params.canonicalURL }}
+Source: {{ . }}
+{{ end }}
+
+{{ .RawContent }}
+    </template>
+{{ end }}
+
+{{ define "aside" }}
+    {{ if .TableOfContents }}
+    <div class="toc-sidebar" id="toc-sidebar">
+        <span class="toc-sidebar__label">On this page</span>
+        {{ .TableOfContents }}
+    </div>
+    {{ end }}
+{{ end }}

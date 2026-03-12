@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{- site.Language.Lang -}}">
+
+    <head>
+        {{- partial "head.html" . -}}
+    </head>
+
+    <body>
+        <div class="page">
+
+            <header class="page__header">
+                {{- partial "header.html" . -}}
+            </header>
+
+            <nav class="page__nav-sidebar">
+                <pre class="nav-sidebar__ascii-profile"><span class="ascii-prompt">~$</span> whoami
+<a href="{{ "/" | relURL }}" class="ascii-author">{{ site.Params.author }}</a>
+<span class="ascii-handle">@atom2ueki</span>
+{{ range site.Params.socialLinks }}<a href="{{ .url }}" rel="me" title="{{ .title }}" class="ascii-social">{{ .title }}</a> {{ end }}</pre>
+                <hr>
+                {{ $posts := site.GetPage "/posts" }}
+                {{ with $posts }}{{ $allPosts := .Pages.ByDate.Reverse }}
+                <div class="nav-sidebar__section">
+                    <span class="nav-sidebar__label">$ ls ./pinned/</span>
+                    <ul class="nav-sidebar__postlist">
+                        {{ range $allPosts }}{{ if .Params.pin }}
+                        <li{{ if eq $.RelPermalink .RelPermalink }} class="active"{{ end }}>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </li>
+                        {{ end }}{{ end }}
+                    </ul>
+                </div>
+                <hr>
+                <div class="nav-sidebar__section">
+                    <span class="nav-sidebar__label">$ ls ./posts/</span>
+                    <ul class="nav-sidebar__postlist">
+                        {{ range $allPosts }}
+                        <li{{ if eq $.RelPermalink .RelPermalink }} class="active"{{ end }}>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                {{ end }}
+                <hr>
+                <div class="nav-sidebar__section">
+                    <span class="nav-sidebar__label">$ ls ./links/</span>
+                    <ul class="nav-sidebar__postlist">
+                        <li><a href="{{ "/posts/" | relURL }}">All posts</a></li>
+                        <li><a href="{{ "llms.txt" | relURL }}">llms.txt</a></li>
+                    </ul>
+                </div>
+                <div class="nav-sidebar__footer">
+                    <p>Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
+                </div>
+            </nav>
+
+            <section class="page__body">
+                {{- block "main" . }}{{- end }}
+            </section>
+
+            <section class="page__aside">
+                {{- block "aside" . }}{{- end }}
+            </section>
+
+            <footer class="page__footer">
+                {{- partial "footer.html" . -}}
+            </footer>
+
+        </div>
+    </body>
+
+</html>

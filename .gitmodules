@@ -1,3 +1,6 @@
 [submodule "themes/github-style"]
 	path = themes/github-style
 	url = git@github.com:atom2ueki/github-style.git
+[submodule "themes/risotto"]
+	path = themes/risotto
+	url = https://github.com/joeroe/risotto
