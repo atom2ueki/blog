@@ -40,6 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- View as Markdown popup ---
+  // Open the markdown source in a new tab via a blob: URL. We build the full
+  // HTML document (with the markdown already baked in) and navigate to it,
+  // rather than opening an empty popup and mutating its document afterwards —
+  // modern browsers (process/site isolation) leave that as a blank about:blank
+  // tab because the synchronous write to a swapped-out popup is a no-op.
   const viewBtn = document.querySelector("[data-view-source]");
   if (viewBtn) {
     const sourceId = viewBtn.getAttribute("data-view-source");
@@ -47,16 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const el = document.getElementById(sourceId);
       if (!el) return;
       const text = el.textContent.replace(/^\n+|\n+\s*$/g, "");
-      const popup = window.open("", "_blank");
-      if (!popup) { showToast("Popup blocked"); return; }
-      popup.document.open();
-      popup.document.write(
+      const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      const html =
         "<!doctype html><html><head><meta charset=utf-8><title>Markdown View</title>" +
         "<style>body{margin:0;padding:24px;background:#1a1a2e;color:#c8c8c8;font:16px/1.6 Menlo,Consolas,monospace;white-space:pre-wrap}pre{margin:0;white-space:pre-wrap;word-break:break-word}</style>" +
-        "</head><body><pre></pre></body></html>"
-      );
-      popup.document.close();
-      popup.document.querySelector("pre").textContent = text;
+        "</head><body><pre>" + esc(text) + "</pre></body></html>";
+      const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const popup = window.open(url, "_blank");
+      // Free the blob URL after the new tab has had time to load it.
+      setTimeout(() => URL.revokeObjectURL(url), 10000);
+      if (!popup) { showToast("Popup blocked"); }
     });
   }
 
